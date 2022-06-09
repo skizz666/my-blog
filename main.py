@@ -74,7 +74,7 @@ class Comment(db.Model):
     author_id = db.Column(db.Integer, ForeignKey("users.id"))
     parent_post = db.Column(db.Integer, ForeignKey("blog_posts.id"))
 
-
+db.create_all()
 def admin_only(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):

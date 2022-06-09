@@ -1,14 +1,14 @@
 {% include "header.html" %}
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1470092306007-055b6797ca72?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')">
+  <header class="masthead" style="background-image: url('https://previews.123rf.com/images/silvertiger/silvertiger1112/silvertiger111200013/11578472-abstrakte-technologie-hintergrund-farbe-blau-vektor-ideal-f%C3%BCr-high-tech-industrie-st%C3%A4dte-moderne-it-.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
             <h1>Micha's Blog</h1>
-            <span class="subheading">A collection of random musings.</span>
+            <span class="subheading">My thoughts while becoming a programmer.</span>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
             <a href="#">{{post.author}}</a>
             on {{post.date}}
             {% if current_user.id == 1 %}
-              <a href="{{url_for('delete_post', post_id=post.id) }}">✘</a>
+              <a href="{{ url_for('delete_post', post_id=post.id) }}">✘</a>
             {% endif %}
           </p>
         </div>
